@@ -1,0 +1,36 @@
+﻿@model List<PdfMvc.Models.Customer>
+@{
+    Layout=null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+<h2>PDF</h2>
+<table>
+    <tr>
+        <th>
+           PRENOM
+        </th>
+        <th>
+            NOM
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @item.FirstName
+        </td>
+        <td>
+            @item.LastName
+        </td>
+    </tr>
+}
+
+</table>
+</body>
+</html>

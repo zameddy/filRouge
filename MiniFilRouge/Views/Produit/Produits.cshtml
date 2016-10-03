@@ -1,0 +1,35 @@
+﻿@model IEnumerable<MiniFilRouge.Models.ProduitCatModel>
+@{
+    ViewBag.Title = "Produits";
+}
+
+<h2>Produits</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.ProduitId)</th>
+            <th>@Html.DisplayNameFor(model => model.NomProduit)</th>
+            <th>@Html.DisplayNameFor(model => model.prix)</th>
+            <th>@Html.DisplayNameFor(model => model.stock)</th>
+            <th>@Html.DisplayNameFor(model => model.nomCat)</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var p in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => p.ProduitId)</td>
+                <td>@Html.DisplayFor(modelItem => p.NomProduit)</td>
+                <td>@Html.DisplayFor(modelItem => p.prix)</td>
+                <td>@Html.DisplayFor(modelItem => p.stock)</td>
+                <td>@Html.DisplayFor(modelItem => p.nomCat)</td>
+            </tr>
+
+        }
+
+    </tbody>
+</table>
+
+
+

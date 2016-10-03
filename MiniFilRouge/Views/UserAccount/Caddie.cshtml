@@ -1,0 +1,54 @@
+﻿
+@{
+    ViewBag.Title = "Caddie";
+}
+@using MiniFilRouge.Controllers
+
+<h4>Bonjour @Session["Username"] (@Session["UserId"])</h4>
+@using (Html.BeginForm("Update", "UserAccount"))
+{ 
+<table class="table table-striped">
+    <tr>
+        <th>OPTION</th>
+        <th>ID</th>
+        <th>NOM</th>
+        <th>PRIX</th>
+        <th>QUANTITE <input type="submit" value="Update"/></th>
+        <th>SOUS TOTAL</th>
+    </tr>
+    @{ 
+        decimal s = 0;
+        int index = 1;
+    }
+    @foreach(Item item in (List<Item>)Session["cart"])
+    {
+        s = s + item.Pr.prix * item.Quantity;
+        <tr>
+            <td>@Html.ActionLink("Supprimer","Delete", "UserAccount",
+               new { id=item.Pr.ProduitId},null)</td>
+            <td>@item.Pr.ProduitId</td>
+            <td>@item.Pr.NomProduit</td>
+            <td>@item.Pr.prix</td>
+            <td><input type="text" value="@item.Quantity" name="qute" class="qute"/></td>
+            <td>
+                @(item.Pr.prix * item.Quantity)
+                @{ index++;}
+            </td>
+        </tr>
+    }
+    <tr>
+        <td align="right" colspan="5">Total</td>
+        <td>@s</td>
+    </tr>
+</table>
+}
+@Html.ActionLink("Continuer mes achats", "Commander", "UserAccount")
+<p align="right">
+    @Html.ActionLink("Valider le panier", "ValiderPanier", "UserAccount")
+</p><br/>
+<p align="right">
+    @Html.ActionLink("Checkout Paypal", "CheckoutPaypal", "UserAccount")
+</p><br />
+<p align="right">
+    @Html.ActionLink("Checkout Chèque", "CheckoutCheque", "UserAccount")
+</p><br />

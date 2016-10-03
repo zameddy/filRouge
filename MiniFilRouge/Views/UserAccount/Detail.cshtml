@@ -1,0 +1,35 @@
+﻿@model MiniFilRouge.Metier.Produit
+@{
+    ViewBag.Title = "Detail";
+}
+
+<h2>Detail Produit</h2>
+
+<div>
+   
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ProduitId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NomProduit)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.prix)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.stock)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ProduitId }) |
+    @Html.ActionLink("Back to List", "Commander")
+</p>
+
+

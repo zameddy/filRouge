@@ -1,0 +1,34 @@
+﻿@model IEnumerable<MiniFilRouge.Models.MesCommandes>
+@{
+    ViewBag.Title = "MesCommandes";
+}
+
+<h2>MesCommandes</h2>
+<h2>Produits</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.PrenomClient)</th>
+            <th>@Html.DisplayNameFor(model => model.NomClient)</th>
+            <th>@Html.DisplayNameFor(model => model.NomProduit)</th>
+            <th>@Html.DisplayNameFor(model => model.Quantite)</th>
+            <th>@Html.DisplayNameFor(model => model.PrixTotal)</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var p in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => p.PrenomClient)</td>
+                <td>@Html.DisplayFor(modelItem => p.NomClient)</td>
+                <td>@Html.DisplayFor(modelItem => p.NomProduit)</td>
+                <td>@Html.DisplayFor(modelItem => p.Quantite)</td>
+                <td>@Html.DisplayFor(modelItem => p.PrixTotal)</td>
+            </tr>
+
+        }
+
+    </tbody>
+</table>
+

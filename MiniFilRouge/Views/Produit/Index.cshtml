@@ -1,0 +1,64 @@
+﻿@model IEnumerable<MiniFilRouge.Metier.Produit>
+@{
+    ViewBag.Title = "Index";
+}
+<html>
+    <head>
+
+    </head>
+    <body>
+        <br />
+        <div class="form-horizontal">
+            @using (Html.BeginForm("Index", "Produit", FormMethod.Post))
+            {@* Marche pas car on utilise pas le bon modèle*@
+                //@Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <span>@Html.DisplayNameFor(model => model.NomProduit) :</span>
+                 @Html.TextBox("NomProduit")
+                @* Marche pas car on utilise pas le bon modèle*@
+               // @Html.ValidationMessageFor(model => model., "", new { @class = "text-danger" })<br />
+                <span>@Html.DisplayNameFor(model => model.prix) :</span>@Html.TextBox("prix")<br />
+                <span>@Html.DisplayNameFor(model => model.stock) :</span>@Html.TextBox("stock")<br />
+                <span>@Html.DisplayNameFor(model => model.Categorie) :</span>
+                @Html.DropDownList("CategorieId", null, htmlAttributes: new { @class = "form-control" })<br />
+              
+                <button type="submit" class="btn-primary text-center">Ajouter</button>
+            }
+        </div>
+        <h3>Liste des produits</h3>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.ProduitId)</th>
+                    <th>@Html.DisplayNameFor(model => model.NomProduit)</th>
+                    <th>@Html.DisplayNameFor(model => model.prix)</th>
+                    <th>@Html.DisplayNameFor(model => model.stock)</th>
+                    <th>@Html.DisplayNameFor(model => model.Categorie)</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+
+                @foreach (var p in Model)
+                {
+                    <tr>
+                        <td>@Html.DisplayFor(modelItem => p.ProduitId)</td>
+                        <td>@Html.DisplayFor(modelItem => p.NomProduit)</td>
+                        <td>@Html.DisplayFor(modelItem => p.prix)</td>
+                        <td>@Html.DisplayFor(modelItem => p.stock)</td>
+                        <td>@Html.DisplayFor(modelItem => p.CategorieId)</td>
+          
+                        <td>
+                            @Html.ActionLink("Edit", "Edit", new { id = p.ProduitId })
+                        </td>
+                        <td>
+                            @Html.ActionLink("Delete", "Delete", new { id = p.ProduitId })
+                        </td>
+                    </tr>
+
+                }
+
+            </tbody>
+        </table>
+    </body>
+</html>
+

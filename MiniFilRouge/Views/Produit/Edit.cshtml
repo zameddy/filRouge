@@ -1,0 +1,21 @@
+﻿@model MiniFilRouge.Metier.Produit
+    @{
+        ViewBag.Title = "Edit";
+    }
+    <html>
+    <head>
+
+    </head>
+    <body>
+@using (Html.BeginForm("Edit", "Produit", FormMethod.Post))
+{
+    @Html.HiddenFor(model => model.ProduitId)
+    <span>Nom :</span>@Html.EditorFor(model => model.NomProduit)<br />
+    <span>Prix :</span>@Html.EditorFor(model => model.prix)<br />
+    <span>Stock :</span>@Html.EditorFor(model => model.stock)<br />
+    <span>Categorie :</span>@Html.DropDownList("CategorieId")<br /><br />
+    <button type="submit" class="btn-primary text-center">MAJ</button>
+}
+    </body>
+</html>
+

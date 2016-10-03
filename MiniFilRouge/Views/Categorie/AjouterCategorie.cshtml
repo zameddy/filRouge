@@ -1,0 +1,48 @@
+﻿@model IEnumerable<MiniFilRouge.Metier.Categorie>
+@{
+    ViewBag.Title = "AjouterCategorie";
+}
+<html>
+    <head>
+
+    </head>
+    <body>
+        <br/>
+        <div>
+            @using (Html.BeginForm("AjouterCategorie", "Categorie", FormMethod.Post))
+            {
+                <span>Entrer nom Catégorie:</span>@Html.TextBox("Nom")<br/>
+                <button type="submit" class="btn-primary text-center">Ajouter</button>
+            }
+        </div>
+
+
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.CategorieId)</th>
+                    <th>@Html.DisplayNameFor(model => model.Nom)</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var p in Model)
+                {
+                    <tr>
+                        <td>@Html.DisplayFor(modelItem => p.CategorieId)</td>
+                        <td>@Html.DisplayFor(modelItem => p.Nom)</td>
+                        <td>
+                            @Html.ActionLink("Edit", "Edit", new { id = p.CategorieId })
+                        </td>
+                        <td>
+                            @Html.ActionLink("Delete", "Delete", new { id = p.CategorieId })
+                        </td>
+                    </tr>
+
+                }
+
+            </tbody>
+        </table>
+
+    </body>
+</html>
+

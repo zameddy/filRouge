@@ -1,0 +1,21 @@
+﻿@model IEnumerable<MiniFilRouge.Metier.Magasin>
+@{
+    ViewBag.Title = "Index";
+}
+<html>
+    <head>
+
+    </head>
+    <body>
+        <div>
+            <div>
+                @using (Html.BeginForm("Index", "Magasin", FormMethod.Post))
+            {
+                    <span>@Html.DisplayNameFor(model=>model.NomMagasin):</span>@Html.TextBox("NomMagasin")<br />
+                    <button type="submit" class="btn-primary text-center">Ajouter</button>
+                }
+            </div>
+        </div>
+    </body>
+</html>
+

@@ -1,0 +1,47 @@
+﻿
+@model IEnumerable<MiniFilRouge.Metier.Produit>
+@{
+    ViewBag.Title = "Commander";
+}
+<html>
+<head>
+
+</head>
+<body>
+    <br />
+    <h3>Liste des produits</h3>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>@Html.DisplayNameFor(model => model.ProduitId)</th>
+                <th>@Html.DisplayNameFor(model => model.NomProduit)</th>
+                <th>@Html.DisplayNameFor(model => model.prix)</th>
+                <th>Détail du produit</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var p in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(modelItem => p.ProduitId)</td>
+                    <td>@Html.DisplayFor(modelItem => p.NomProduit)</td>
+                    <td>@Html.DisplayFor(modelItem => p.prix)</td>
+                    <td>@Html.ActionLink("Détails", "Detail" 
+                                     ,new { id = p.ProduitId }, null)</td>
+                    <td>@Html.ActionLink("Order Now", "AjouterCaddie",
+                       "UserAccount",new { id=p.ProduitId},null)</td>
+                   
+                </tr>
+
+            }
+
+        </tbody>
+    </table>
+</body>
+</html>
+
+
+
+
+

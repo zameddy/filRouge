@@ -1,0 +1,15 @@
+﻿@model IEnumerable<MiniFilRouge.Metier.ProduitMagasin>
+@{
+    ViewBag.Title = "MagasinProduit";
+}
+
+<h2>MagasinProduit</h2>
+
+@using (Html.BeginForm("MagasinProduit", "Magasin", FormMethod.Post))
+            {
+                <span>@Html.DisplayNameFor(model => model.quantite) :</span>@Html.TextBox("quantite")<br />
+                <span>@Html.DisplayNameFor(model => model.Magasin) :</span>@Html.DropDownList("MagasinId", null, htmlAttributes: new { @class = "form-control" })<br />
+                <span>@Html.DisplayNameFor(model => model.Produit) :</span>@Html.DropDownList("ProduitId", null, htmlAttributes: new { @class = "form-control" })<br />
+                <button type="submit" class="btn-primary text-center">Ajouter</button>
+            }
+

@@ -1,0 +1,14 @@
+﻿@{
+    ViewBag.Title = "Categories";
+}
+<h2>Categories</h2>
+<div class="container spacer">
+    <form method="post" action="/Produit/Chercher">
+        <div class="form-group">
+            <label>Mot Clé:</label>
+            <input type="text" name="motCle" value="@Html.ViewBag.motCle"/>
+            <button type="submit">Chercher</button>
+            @Html.ValidationMessage("motCle",new { @class="text-danger"})
+        </div>
+    </form>
+</div>
