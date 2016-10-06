@@ -322,7 +322,6 @@ namespace MiniFilRouge.Dao
                                                     c.UserAccountId == ct.UserAccountId);
                 if (req != null)
                 {
-                    //bdd.Entry(ct).State = EntityState.Modified;
                     req.DateConsultation = DateTime.Now;
                     bdd.SaveChanges();
                 }

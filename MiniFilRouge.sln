@@ -9,8 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyShoppingCart", "MyShoppin
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PdfMvc", "PdfMvc\PdfMvc.csproj", "{2B6FE6D6-7C1E-4467-8666-A7F47417C8F5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExempleGit", "ExempleGit\ExempleGit.csproj", "{3C1FE870-BA41-439C-9708-468D26A0B610}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,10 +27,6 @@ Global
 		{2B6FE6D6-7C1E-4467-8666-A7F47417C8F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2B6FE6D6-7C1E-4467-8666-A7F47417C8F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2B6FE6D6-7C1E-4467-8666-A7F47417C8F5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3C1FE870-BA41-439C-9708-468D26A0B610}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3C1FE870-BA41-439C-9708-468D26A0B610}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3C1FE870-BA41-439C-9708-468D26A0B610}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3C1FE870-BA41-439C-9708-468D26A0B610}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
