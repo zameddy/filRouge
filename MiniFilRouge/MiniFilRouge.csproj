@@ -167,6 +167,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Metier\Adresse.cs" />
     <Compile Include="Metier\Categorie.cs" />
     <Compile Include="Metier\CategorieImpl.cs" />
     <Compile Include="Metier\Commande.cs" />
@@ -183,6 +184,7 @@
     <Compile Include="Metier\Produit.cs" />
     <Compile Include="Metier\ProduitImpl.cs" />
     <Compile Include="Metier\ProduitMagasin.cs" />
+    <Compile Include="Metier\Role.cs" />
     <Compile Include="Metier\UserAccount.cs" />
     <Compile Include="Metier\UserAccountImpl.cs" />
     <Compile Include="Migrations\201609161818273_1.cs" />
@@ -236,6 +238,14 @@
     <Compile Include="Migrations\201610030611195_14.cs" />
     <Compile Include="Migrations\201610030611195_14.Designer.cs">
       <DependentUpon>201610030611195_14.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610061226001_15.cs" />
+    <Compile Include="Migrations\201610061226001_15.Designer.cs">
+      <DependentUpon>201610061226001_15.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610061250321_16.cs" />
+    <Compile Include="Migrations\201610061250321_16.Designer.cs">
+      <DependentUpon>201610061250321_16.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\MesCommandes.cs" />
@@ -356,6 +366,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201610030611195_14.resx">
       <DependentUpon>201610030611195_14.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610061226001_15.resx">
+      <DependentUpon>201610061226001_15.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610061250321_16.resx">
+      <DependentUpon>201610061250321_16.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

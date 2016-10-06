@@ -21,5 +21,7 @@ namespace MiniFilRouge.Dao
         public DbSet<Commande> Commandes { get; set; }
         public DbSet<LigneCommande> LignesCommandes { get; set; }
         public DbSet<Consulter> ConsultationsProduits { get; set; }
+        public DbSet<Adresse> Adresses { get; set; }
+        public DbSet<Role> Roles { get; set; }
     }
 }

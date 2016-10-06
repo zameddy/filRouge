@@ -29,7 +29,13 @@ namespace MiniFilRouge.Metier
         [DataType(DataType.Password)]
         public string ConfirmPassword { get; set; }
 
+        public int RoleId { get; set;}
+        public virtual Role Role { get; set;}
+
         public virtual ICollection<Commande> MesCommandes { get; set; }
         public virtual ICollection<Consulter> MesConsultationsProduits { get; set; }
+
+        public int AdresseId { get; set; }
+        public virtual Adresse Adresse { get; set; }
     }
 }
