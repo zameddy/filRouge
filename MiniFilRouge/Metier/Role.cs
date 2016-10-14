@@ -8,7 +8,7 @@ namespace MiniFilRouge.Metier
     public class Role
     {
         public int RoleId { get; set; }
-        public int NomRole { get; set; }
+        public string NomRole { get; set; }
 
         public ICollection<UserAccount> UserAccount { get; set; }
     }

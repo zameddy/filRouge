@@ -217,8 +217,9 @@ namespace MiniFilRouge.Controllers
 
         public ActionResult CheckoutPaypal()
         {
+            // création de l'url de connexion à paypal
             string returnURL = "";
-            returnURL += "https://www.paypal.com/cgi-bin/webscr?cmd=cart&upload=1&business=services.huios@gmail.com";
+            returnURL += "https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_cart&upload=1&business=services.huios-pro@gmail.com";
             List<Item> cart = (List<Item>)Session["cart"];
             int i = 0;
             foreach (Item item in cart)
@@ -232,9 +233,9 @@ namespace MiniFilRouge.Controllers
             //devise par défaut
             returnURL += "&currency=EUR";
             //URL de retour à la page précédente
-            returnURL += "&return=http://www.google.com";
+            returnURL += "&return=http://localhost:58327/UserAccount/Commander";
             //URL en cas d'annulation de la transaction
-            returnURL += "&cancel_return=http://www.google.com";
+            returnURL += "&cancel_return=http://localhost:58327/UserAccount/Commander";
 
             //vider la session Caddie
             Session.Remove("cart");

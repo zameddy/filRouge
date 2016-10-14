@@ -66,6 +66,8 @@ namespace MiniFilRouge.Dao
         {
             using (var bdd = new Dao.ApplicationContext())
             {
+                u.RoleId = 1;
+                u.AdresseId = 1;
                 bdd.UserAccounts.Add(u);
                 bdd.SaveChanges();
                 return u;
